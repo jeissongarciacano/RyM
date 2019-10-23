@@ -26,7 +26,7 @@
 
        </div>   
           
-         <form align="center">
+         <form name=Formulariodatos align="center">
 			<input type="text" id="nombre"placeholder="Nombre" maxlength="10" required name="nombre" size="50"> 
 			</br></br>
 			<input type="text" id="apellido"placeholder="Apellidos" maxlength="100" required name="nombre" size="50"> 
@@ -51,7 +51,24 @@
 			</br></br>
             
             <td><div align="center">
-            <input type="submit" value="Enviar y generar código"></div></td>
+            <input type="submit" value="Enviar y generar código" onclick="check();"></div></td>
+
          </form>  
+         <script>
+                class persona{
+                    constructor(name, lastname,id,tipoid,correo,pasword){
+                        this.name=name;
+                        this.lastname=lastname;
+                        this.id=id;
+                        this.tipoid=tipoid;
+                        this.correo=correo;
+                        this.pasword=pasword;
+                    }
+                }
+                function check(){
+                    aux1 = new persona(document.Formulariodatos.nombre," ", " ", " ", " ", " ");
+               
+                }
+            </script>
     </body>
 </html>
