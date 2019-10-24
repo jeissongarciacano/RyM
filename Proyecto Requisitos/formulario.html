@@ -27,9 +27,9 @@
        </div>   
           
          <form name=Formulariodatos align="center">
-			<input type="text" id="nombre"placeholder="Nombre" maxlength="10" required name="nombre" size="50"> 
+			<input type="text" name="nomb" id="nombre" placeholder="Nombre" maxlength="10" required name="nombre" size="50"> 
 			</br></br>
-			<input type="text" id="apellido"placeholder="Apellidos" maxlength="100" required name="nombre" size="50"> 
+			<input type="text" name="lastn" id="apellido"placeholder="Apellidos" maxlength="100" required name="nombre" size="50"> 
 			</br></br>
             <label type="text" name="Identificación">
             <label for="identificacion">Identificaión: </label><!--Me relaciona con el select por medio del id-->
@@ -40,14 +40,14 @@
                 <option value="pasaporte">Pasaporte</option>
 			</select>
             </br></br>
-            <input type="text" id="numeroid"placeholder="Número de identificación" maxlength="100" required name="numeroid" size="50"> 
+            <input type="text" name="numid" id="numeroid"placeholder="Número de identificación" maxlength="100" required name="numeroid" size="50"> 
 			</br></br>
             <label for="nombre">Correo electrónico:</label>
             <input type="text"  name="correo" size="50" maxlength="80">
             </br></br>
-            <input type="text" id="username"placeholder="Usuario" maxlength="10" required name="username" size="50"> 
+            <input type="text" name="userna" id="username"placeholder="Usuario" maxlength="10" required name="username" size="50"> 
 			</br></br>
-            <input type="password" id="password"placeholder="Contraseña" maxlength="10" required name="password" size="50"> 
+            <input type="password" name="pass" id="password"placeholder="Contraseña" maxlength="10" required name="password" size="50"> 
 			</br></br>
             
             <td><div align="center">
@@ -56,18 +56,24 @@
          </form>  
          <script>
                 class persona{
-                    constructor(name, lastname,id,tipoid,correo,pasword){
+                    constructor(name, lastname,username,tipoid,id,correo,pasword){
                         this.name=name;
                         this.lastname=lastname;
                         this.id=id;
                         this.tipoid=tipoid;
                         this.correo=correo;
                         this.pasword=pasword;
+                        this.username=username;
+                    }
+                    print(){
+                        return this.name + " " + this.lastname + " user: " + this.username + " id: " + this.tipoid + " " + this.id + " correo: "  + this.correo + " pass:  " + this.pasword ;
                     }
                 }
                 function check(){
-                    aux1 = new persona(document.Formulariodatos.nombre," ", " ", " ", " ", " ");
-               
+                    aux1 = new persona(document.Formulariodatos.nomb.value,document.Formulariodatos.lastn.value,document.Formulariodatos.userna.value,
+                     document.Formulariodatos.Identificación.value,document.Formulariodatos.numid.value,
+                     document.Formulariodatos.correo.value,document.Formulariodatos.pass.value);
+                    alert(aux1.print());
                 }
             </script>
     </body>
