@@ -1,5 +1,5 @@
 {
-    "name" : "mysqlApplication",
+    "name" : "node-mysql-connection",
     "version" : "1.0.0",
     "main" : "login.html",
     "scripts": {
