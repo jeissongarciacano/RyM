@@ -1,8 +1,22 @@
 {
     "name" : "mysqlApplication",
     "version" : "1.0.0",
+    "main" : "login.html",
+    "scripts": {
+    "start" : "node login.html",
+    "dev" : "node login.html"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "1.19.4"
+    },
+
     "dependencies" : {
-        "express" : "^4.13.4",
-        "mysql" : "^2.10.2"
+        "body-parser": "1.19.0",
+        "ejs": "2.7.1",
+        "express": "4.17.1",
+        "mysql": "2.17.1"
     }
 }
