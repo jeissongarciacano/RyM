@@ -1,0 +1,47 @@
+ {% extends 'core/base.html' %}
+     {% load static %}
+     {%block title%}Recarga{% endblock %}
+     {%block headers%}
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width=device-width", 
+        user-scalable=ni,initial-scale=1.0,maximium-scale=1.0,minimium-scale=1.0">
+        <link rel="stylesheet" href="{%static 'core/css/estilos.css'%}">
+        <link rel="stylesheet" href="{%static 'core/css/listas.css'%}">
+    {% endblock %}
+    {%block content%}
+    <body> 
+        <div class="contenedor">
+            <section class="titulo">
+                    <img src=" {%static 'core/img/qr.png'%}" alt=""> 
+            </section>
+
+            <section class="contenidoPrincipal">
+                <div class="responsive-table">
+                        <table class="table"> 
+                                <tr> 
+                                    <td><button type="submit">$10000</button></td> 
+                                    <td><button type="submit">$20000</button></td>
+                                    <td><button type="submit">$30000 </td>
+                                </tr>
+                    
+                                <tr> 
+                                    <td><button type="submit">$40000</td>
+                                    <td><button type="submit">$50000</td>
+                                    <td><button type="submit">$60000</td>
+                                </tr>                   
+                                <tr> 
+                                    <td><button type="submit">$70000</td>
+                                    <td><button type="submit">$80000</td>
+                                    <td><button type="submit">$90000</td>
+                                </tr>
+                                 <tr> 
+                                    <td></td>
+                                    <td><button type="submit">Ingresar valor</td>
+                                    <td></td>
+                                
+                                </tr>
+                        </table>
+                </div>
+            </section>
+    </body>
+    {%endblock%}

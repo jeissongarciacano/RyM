@@ -1,0 +1,39 @@
+
+     {% extends 'core/base.html' %}
+     {% load static %}
+     {%block title%}Información Cuenta{% endblock %}
+     {%block headers%}
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width=device-width", 
+        user-scalable=ni,initial-scale=1.0,maximium-scale=1.0,minimium-scale=1.0">
+        <link rel="stylesheet" href="{%static 'core/css/estilos.css'%}">
+        <link rel="stylesheet" href="{%static 'core/css/listas.css'%}">
+    {% endblock %}
+    {%block content%}
+    <body> 
+        <div class="contenedor">
+            <section class="titulo">
+                    <img src=" {%static 'core/img/qr.png'%}" alt=""> 
+            </section>
+
+            <section class="contenidoPrincipal">
+                <div class="responsive-table">
+                        <table class="table"> 
+                                <tr> 
+                                    <td><img src="{%static 'core/img/infop.jpg'%}" alt=""  > </td> 
+                                    <td><a href="{% url 'infopersonal' %}">Información Personal</a></td>
+                                    <td><img src="{%static 'core/img/dineroact.png'%}" alt="" > </td>
+                                    <td><a href="">Dinero actual</a></td>
+                                </tr>
+                    
+                                <tr> 
+                                    <td><img src="{%static 'core/img/parque.jpg'%}" alt="" > </td>
+                                    <td><a href="">Lista de parqueaderos</a></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                        </table>
+                </div>
+            </section>
+    </body>
+    {%endblock%}
