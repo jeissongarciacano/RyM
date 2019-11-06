@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Log in</title> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="estilosbo.css">
+        <link rel="stylesheet" href="listas.css">
+    </head>
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC1-4udDgexdCLSfcB4CLURfWJ0HHXrns8",
+            authDomain: "requisitos-89b2f.firebaseapp.com",
+            databaseURL: "https://requisitos-89b2f.firebaseio.com",
+            projectId: "requisitos-89b2f",
+            storageBucket: "requisitos-89b2f.appspot.com",
+            messagingSenderId: "848195812074",
+            appId: "1:848195812074:web:49fe2a13f7714b697c7593",
+            measurementId: "G-QB4WJWCJML"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        // Get a reference to the database service
+        var database = firebase.database();
+        </script>
+    <body>
+    
+      <div class="contenedor">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="login.html">Sign in</a></li>
+                       
+                    </ul>   
+                </nav>
+            <title>Log in</title>  
+            </header>
+
+       </div>   
+          
+         <form name=Formulariodatos align="center">
+			<input type="text" name="nomb" id="nombre" placeholder="Nombre" maxlength="10" required name="nombre" size="50"> 
+			</br></br>
+			<input type="text" name="lastn" id="apellido"placeholder="Apellidos" maxlength="100" required name="nombre" size="50"> 
+			</br></br>
+            <label type="text" name="Identificación">
+            <label for="identificacion">Identificaión: </label><!--Me relaciona con el select por medio del id-->
+			<select name="Identificación" id="identificacion"> <!--Seleccionar una opción-->
+				<option value="cciudadania">Cédula de ciudadania</option>
+				<option value="tidentidad">Tarjeta de identidad</option>
+				<option value="cextranjeria">Cédula de extranjería</option>
+                <option value="pasaporte">Pasaporte</option>
+			</select>
+            </br></br>
+            <input type="text" name="numid" id="numeroid"placeholder="Número de identificación" maxlength="100" required name="numeroid" size="50"> 
+			</br></br>
+            <label for="nombre">Correo electrónico:</label>
+            <input type="text"  name="correo" size="50" maxlength="80">
+            </br></br>
+            <input type="text" name="userna" id="username"placeholder="Usuario" maxlength="10" required name="username" size="50"> 
+			</br></br>
+            <input type="password" name="pass" id="password"placeholder="Contraseña" maxlength="10" required name="password" size="50"> 
+			</br></br>
+            
+            <td><div align="center">
+            <input type="submit" value="Enviar y generar código" onclick="writeUserData();"></div></td>
+
+         </form>  
+         <script>
+                class persona{
+                    constructor(name, lastname,username,tipoid,id,correo,pasword){
+                        this.name=name;
+                        this.lastname=lastname;
+                        this.id=id;
+                        this.tipoid=tipoid;
+                        this.correo=correo;
+                        this.pasword=pasword;
+                        this.username=username;
+                    }
+                    print(){
+                        return this.name + " " + this.lastname + " user: " + this.username + " id: " + this.tipoid + " " + this.id + " correo: "  + this.correo + " pass:  " + this.pasword ;
+                    }
+                }
+                function check(){
+                    aux1 = new persona(document.Formulariodatos.nomb.value,document.Formulariodatos.lastn.value,document.Formulariodatos.userna.value,
+                     document.Formulariodatos.Identificación.value,document.Formulariodatos.numid.value,
+                     document.Formulariodatos.correo.value,document.Formulariodatos.pass.value);
+                    alert(aux1.print());
+                }
+                function writeUserData() {
+                    firebaseAuth.crea
+                }
+            </script>
+    </body>
+</html>

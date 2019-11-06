@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Página Principal</title> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="listas.css">
+        <link rel="stylesheet" href="estilosbo.css">
+    </head>
+    <body> 
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC1-4udDgexdCLSfcB4CLURfWJ0HHXrns8",
+            authDomain: "requisitos-89b2f.firebaseapp.com",
+            databaseURL: "https://requisitos-89b2f.firebaseio.com",
+            projectId: "requisitos-89b2f",
+            storageBucket: "requisitos-89b2f.appspot.com",
+            messagingSenderId: "848195812074",
+            appId: "1:848195812074:web:49fe2a13f7714b697c7593",
+            measurementId: "G-QB4WJWCJML"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        // Get a reference to the database service
+        var database = firebase.database();
+        </script>
+        <div class="contenedor">
+                
+                <header>
+                <nav>
+                    <ul>
+                        <li><a href="login.html">Volver al inicio</a></li>
+                       
+                    </ul>   
+                </nav>
+                </header>
+            
+
+            <section class="titulo">
+                    <img src="img/logo.png" alt="" > 
+            </section>
+
+            <section class="contenidoPrincipal">
+                <div class="responsive-table">
+                        <table class="table"> 
+                                <tr> 
+                                    <td><img src="img/informacion.jpg" alt=""  > </td> 
+                                    <td><img src="img/parqueaderos.png" alt="" > </td>
+                                    <td><img src="img/recarga.png" alt="" > </td>
+                                </tr>
+                                 <tr> 
+                                    <td><a href="informacion.html">Información de la cuenta</a></td>
+                                    <td><a href="parqueaderos.html">Acceso a parqueaderos</a></td>
+                                    <td><a href="recarga.html">Recarga</a></td>
+                                </tr>
+                        </table>
+                </div>
+            </section>
+
+        </div>
+    </body>
+</html>
