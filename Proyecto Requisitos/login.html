@@ -28,18 +28,28 @@
     <div class="login-box">
       <img src="img/icono.png" class="avatar" alt="Avatar Image">
       <!--<h1>Login</h1>-->
-      <form>
+      <form name=Formulariodatos>
         <!-- USERNAME INPUT -->
-        <label for="username">Usuario</label>
-        <input type="text" placeholder="Enter Username">
+        <label for="username" >Usuario</label>
+        <input type="text" name="user" placeholder="Enter Username">
         <!-- PASSWORD INPUT -->
-        <label for="password">Contraseña</label>
-        <input type="password" placeholder="Enter Password">
-        <input type="button" value="Acceder">
+        <label for="password" >Contraseña</label>
+        <input type="password" name="pass" placeholder="Enter Password">
+        <input type="button" value="Acceder" OnClick="checkdata();">
 		    <input type="button" value="Registrarse" OnClick=" location.href= 'formulario.html'">
         <a href="#">¿Olvidaste tu contraseña?</a><br>
         <!--<a href="#">¿No tienes una cuenta?</a>-->
       </form>
     </div>
   </body>
+  <script>
+    function checkdata(){
+      if(document.Formulariodatos.user.value !='' && document.Formulariodatos.pass.value !=''){
+        location.href= 'paginaprincipal.html';
+      }else{
+        alert('espacios vacios');
+      }
+      
+  }
+  </script>
 </html>

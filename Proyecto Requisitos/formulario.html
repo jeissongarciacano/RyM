@@ -70,10 +70,18 @@
                     }
                 }
                 function check(){
-                    aux1 = new persona(document.Formulariodatos.nomb.value,document.Formulariodatos.lastn.value,document.Formulariodatos.userna.value,
+                    if(document.Formulariodatos.nomb.value!='' && document.Formulariodatos.lastn.value!='' && document.Formulariodatos.userna.value !='' &&
+                     document.Formulariodatos.Identificación.value!='' && document.Formulariodatos.numid.value!='' &&
+                     document.Formulariodatos.correo.value!='' && document.Formulariodatos.pass.value!=''){
+                       aux1 = new persona(document.Formulariodatos.nomb.value,document.Formulariodatos.lastn.value,document.Formulariodatos.userna.value,
                      document.Formulariodatos.Identificación.value,document.Formulariodatos.numid.value,
                      document.Formulariodatos.correo.value,document.Formulariodatos.pass.value);
-                    alert(aux1.print());
+                      location.href= 'paginaprincipal.html';
+                        alert('registro exitoso');  
+                       
+                     }
+                    
+
                 }
             </script>
     </body>
